@@ -3,13 +3,18 @@ server:
 
 spring:
   datasource:
-    url: jdbc:h2:mem:question-web
+    url: jdbc:h2:file:~/spring-boot-h2-db
     driverClassName: org.h2.Driver
+    username: USR_QUESTION
+    password: admin
   h2:
     console:
       enabled: true
+  sql:
+    init:
+      mode: always
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
-      ddl-auto: create-drop
+      ddl-auto: create
     defer-datasource-initialization: true
