@@ -7,10 +7,7 @@ import com.fiap.questionapi.model.mapper.TicketMapper;
 import com.fiap.questionapi.service.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -39,4 +36,21 @@ public class TicketController {
                 ticketMapper.modelToDto(ticketList)
         );
     }
+
+    @GetMapping("hospitalUnit/{id}")
+    public ResponseEntity<List<TicketResponseDTO>> findByHospitalUnitIdAndStatusIdOrderByEmergencyRoomDesc(@PathVariable("id") Long idUnit) {
+        List<Ticket> ticketList = ticketService.findByHospitalUnitIdAndStatusIdOrderByEmergencyRoomDesc(idUnit);
+        return ResponseEntity.ok().body(
+                ticketMapper.modelToDto(ticketList)
+        );
+    }
+
+    @PutMapping("{id}")
+    public ResponseEntity<TicketResponseDTO> updateStatus(@PathVariable("id") Long id) throws NotFoundException {
+        Ticket ticket = ticketService.updateStatus(id);
+        return ResponseEntity.ok().body(
+                ticketMapper.modelToDto(ticket)
+        );
+    }
+
 }

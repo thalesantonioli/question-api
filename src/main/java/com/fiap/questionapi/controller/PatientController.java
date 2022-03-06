@@ -23,9 +23,9 @@ public class PatientController {
     @Autowired
     private PatientMapper patientMapper;
 
-    @GetMapping("/email/{email}")
-    public ResponseEntity<PatientResponseDTO> findByEmail(@PathVariable("email") String email) {
-        Patient patient = patientService.findByEmail(email);
+    @GetMapping("/cpf/{cpf}")
+    public ResponseEntity<PatientResponseDTO> findByCpf(@PathVariable("cpf") String cpf) {
+        Patient patient = patientService.findByCpf(cpf);
         return ResponseEntity.ok().body(
                 patientMapper.modelToDto(patient)
         );

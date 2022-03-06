@@ -7,5 +7,7 @@ import java.util.List;
 
 public interface TicketService {
     List<Ticket> findByPatientId(Long idPatient);
+    List<Ticket> findByHospitalUnitIdAndStatusIdOrderByEmergencyRoomDesc(Long idUnit);
     Ticket findById(Long id) throws NotFoundException;
+    Ticket updateStatus(Long id) throws NotFoundException;
 }

@@ -7,4 +7,5 @@ import java.util.List;
 
 public interface TicketRepository extends JpaRepository<Ticket, Long> {
     List<Ticket> findByAnswerPatientId(Long idPatient);
+    List<Ticket> findByHospitalUnitIdAndStatusIdOrderByEmergencyRoomDesc(Long idUnit, Long idStatus);
 }

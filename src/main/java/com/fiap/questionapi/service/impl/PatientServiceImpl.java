@@ -13,7 +13,7 @@ public class PatientServiceImpl implements PatientService {
     private PatientRepository patientRepository;
 
     @Override
-    public Patient findByEmail(String email) {
-        return patientRepository.findByEmail(email);
+    public Patient findByCpf(String cpf) {
+        return patientRepository.findByCpf(cpf);
     }
 }
