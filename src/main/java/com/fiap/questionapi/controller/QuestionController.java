@@ -12,6 +12,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("question")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class QuestionController {
 
     @Autowired

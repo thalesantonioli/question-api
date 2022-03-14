@@ -13,6 +13,7 @@ import java.util.List;
 
 @RestController
 @RequestMapping("ticket")
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 public class TicketController {
 
     @Autowired
