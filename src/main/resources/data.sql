@@ -18,15 +18,6 @@ values
     (4, 'Unidade Hub Canoas', 'Av. Getulio Vargas', 4831, 'Canoas', 'RS', 92020333);
 
 
-
-insert into TB_PATIENT (ID_PATIENT, ADDRESS_PATIENT, NUM_ADDRESS, DT_BIRTH, CITY_ADDRESS, CPF_PATIENT, EMAIL, NM_MOTHER, NM_PACIENT, PHONE, STATE_ADDRESS, ZIP_CODE)
-values
-    (1, 'Rua Carlos Chagas', 50, '1992-03-17', 'Porto Alegre', '12345678912', 'maria_92@gmail.com', 'Joaquina Silva', 'Maria de Lourdes Silva', 5133355678, 'RS', 90030020),
-    (2, 'Rua Cassiano do Nascimento', 320, '1959-11-01', 'Porto Alegre', 99988877766, 'felipe_59@gmail.com', 'Amanda de Castro', 'Felipe de Castro', 5133358790, 'RS', 90010070),
-    (3, 'Av. Osvaldo Aranha', 214, '1962-07-01', 'Porto Alegre', 11122233344, 'joana_62@gmail.com', 'Gabriela Soares', 'Joana Soares', 5133353231, 'RS', 90035190),
-    (4, 'Av. Alberto Bins', 450, '1945-04-17', 'Porto Alegre', 44455566677, 'clara_45@gmail.com', 'Maria Dias', 'Clara Dias', 5133350000, 'RS', 90030140);
-
-
 insert into TB_QUIZ (ID_QUIZ, NM_QUIZ, TP_QUIZ)
 values
     (1, 'Habitos e Saude', 1),

@@ -23,9 +23,9 @@ public class AnswerController {
     @Autowired
     private AnswerMapper answerMapper;
 
-    @GetMapping("patient/{cpf}")
-    public ResponseEntity<List<AnswerResponseDTO>> findLastByPatient(@PathVariable("cpf") String cpf) {
-        List<Answer> answerList = answerService.findLastByPatient(cpf);
+    @GetMapping("patient/{id}")
+    public ResponseEntity<List<AnswerResponseDTO>> findLastByPatient(@PathVariable("id") String id) {
+        List<Answer> answerList = answerService.findLastByPatient(id);
         return ResponseEntity.ok().body(
                 answerMapper.modelToDto(answerList)
         );

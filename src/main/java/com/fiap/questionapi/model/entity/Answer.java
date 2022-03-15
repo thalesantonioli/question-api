@@ -4,6 +4,7 @@ import lombok.*;
 
 import javax.persistence.*;
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Table(name = "tb_answer")
@@ -18,9 +19,8 @@ public class Answer {
     @Column(name = "id_answer")
     private Long id;
 
-    @ManyToOne
-    @JoinColumn(name = "id_patient", referencedColumnName = "id_patient")
-    private Patient patient;
+    @Column(name = "id_patient")
+    private String patientId;
 
     @ManyToOne
     @JoinColumn(name = "id_quiz", referencedColumnName = "id_quiz")

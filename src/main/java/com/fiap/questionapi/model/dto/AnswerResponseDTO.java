@@ -11,7 +11,7 @@ import java.time.LocalDate;
 @NoArgsConstructor
 public class AnswerResponseDTO {
     private Long id;
-    private PatientResponseDTO patient;
+    private String patientId;
     private QuizResponseDTO quiz;
     private QuestionResponseDTO question;
     private String description;
