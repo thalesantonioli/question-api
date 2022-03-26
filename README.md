@@ -1,5 +1,7 @@
 # Question API
 
+![](./arch.png)
+
 ### Short Description:
 This application is responsible for saving the anamnesis responses from the HVM users
 
