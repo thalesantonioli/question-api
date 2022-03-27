@@ -41,8 +41,8 @@ values
     (13, false, 'Fumante', 1),
     (14, false, 'Pratica atividade fisica', 1),
     (15, false, 'Consome bebida alcoolica', 1),
-    (16, false, 'Quer se dirigir a unidade de emergencia', 2);
-
+    (16, true, 'Quanto tempo em minutos sera necessario para que voce chegue a uma unidade de emergencia HMV', 2);
+    
 
 insert into TB_ANSWER (ID_ANSWER, DT_ANSWER, ANSWER, DESC_ANSWER, ID_PATIENT, ID_QUESTION, ID_QUIZ)
 values
