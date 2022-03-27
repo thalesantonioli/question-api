@@ -1,5 +1,6 @@
 package com.fiap.questionapi.controller;
 
+import com.fiap.questionapi.model.dto.AnswerRequestDTO;
 import com.fiap.questionapi.model.dto.AnswerResponseDTO;
 import com.fiap.questionapi.model.dto.TicketResponseDTO;
 import com.fiap.questionapi.model.entity.Answer;
@@ -31,4 +32,11 @@ public class AnswerController {
         );
     }
 
+    @PostMapping
+    public ResponseEntity<List<AnswerResponseDTO>> create(@RequestBody AnswerRequestDTO answerRequestDTO) throws Exception {
+        List<Answer> answerList = answerService.create(answerRequestDTO);
+        return ResponseEntity.ok().body(
+                answerMapper.modelToDto(answerList)
+        );
+    }
 }
