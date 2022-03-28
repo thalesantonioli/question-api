@@ -15,7 +15,8 @@ import java.time.LocalDate;
 public class Answer {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY, generator="answer_id_seq")
+    @SequenceGenerator(name="answer_id_seq", sequenceName="answer_id_seq", allocationSize = 1)
     @Column(name = "id_answer")
     private Long id;
 
